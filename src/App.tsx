@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Box, Button, Modal, Typography } from '@mui/material'
 import AnswerButton from './Components/QuestionButtons'
 import Questions from './Components/Questions'
+import { BoxStyle, TitleStyle, ButtonContent,ButtonStyle } from './ModalStyle'
 
 function App() {
 
@@ -16,11 +17,12 @@ function App() {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 420,
+    height: 170,
     bgcolor: 'background.paper',
-    border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    borderRadius: 2
   };
   return (
     <>
@@ -40,20 +42,18 @@ function App() {
 
       </div>
       <div>
-        <Modal
-          open={open}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
+        <Modal open={open} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+          <Box sx={BoxStyle}>
+            <Typography sx={TitleStyle} id="modal-modal-title" variant="h6" component="h2">
               Sınava Başla
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              <Button onClick={handleClose}>Başla</Button>
-            </Typography>
+
+            <Box sx={ButtonContent}>
+              <Button sx={ButtonStyle} onClick={handleClose}>Başla</Button>
+            </Box>
           </Box>
         </Modal>
+
       </div>
     </>
   )

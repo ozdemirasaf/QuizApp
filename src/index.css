@@ -79,3 +79,11 @@ body,
   letter-spacing: 0.2rem;
 }
 
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .buttonContent {
+    gap: 10px;
+  }
+}
