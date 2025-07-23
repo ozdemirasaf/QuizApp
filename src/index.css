@@ -1,3 +1,8 @@
+:root {
+  --color: #e17c57;
+  --background: #5eb490;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,18 +25,20 @@ body,
   gap: 20px;
 }
 
+/* Question Button  */
 .QuestionButtonsContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 10px;
 }
 
 .questionButtons {
-  width: 220px;
-  height: 40px;
+  width: 12.5rem;
+  height: 2.5rem;
   border: none;
   border-radius: 10px;
-  background-color: #e17c57;
+  background-color: var(--background);
   color: #fff;
   font-size: 17px;
   font-weight: 500;
@@ -39,14 +46,14 @@ body,
 }
 
 .questionButtons:hover {
-  border: 3px solid #e17c57;
-  color: #e17c57;
+  border: 3px solid var(--background);
+  color: var(--background);
   background-color: transparent;
 }
 
 .questionButtons.selected {
-  border: 3px solid #e17c57;
-  color: #e17c57;
+  border: 3px solid var(--background);
+  color: var(--background);
   background-color: transparent;
 }
 
@@ -54,6 +61,21 @@ body,
 .buttonContent {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
-
+  gap: 20px;
 }
+
+.questionInfo {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color);
+}
+
+/* Question */
+
+.questions {
+  color: var(--color);
+  letter-spacing: 0.2rem;
+}
+

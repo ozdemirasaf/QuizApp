@@ -20,7 +20,7 @@ export default function QuestionButtons() {
 
             </div>
 
-            <p>1. Soru</p>
+            <p className="questionInfo">1. Soru</p>
         </div>
     )
 }
